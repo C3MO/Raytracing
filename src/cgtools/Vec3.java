@@ -22,6 +22,14 @@ public class Vec3 {
         this.z = v.z;
     }
 
+    /** Sets this vector to the given vector. This vector is modified. */
+    public Vec3 set(Vec3 v) {
+        x = v.x;
+        y = v.y;
+        z = v.z;
+        return this;
+    }
+
     /** Adds the given vector to this vector. This vector is modified. */
     public Vec3 add(Vec3 v) {
         x += v.x;
@@ -93,6 +101,11 @@ public class Vec3 {
     }
 
     /** Calculates the dot product. */
+    public double dot(double vx, double vy, double vz) {
+        return x * vx + y * vy + z * vz;
+    }
+
+    /** Calculates the dot product. */
     public static double dot(Vec3 a, Vec3 b) {
         return a.x * b.x + a.y * b.y + a.z * b.z;
     }
@@ -153,8 +166,10 @@ public class Vec3 {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Vec3)) return false;
-        if (o == this) return true;
+        if (!(o instanceof Vec3))
+            return false;
+        if (o == this)
+            return true;
         Vec3 v = (Vec3) o;
         return v.x == x && v.y == y && v.z == z;
     }

@@ -8,7 +8,7 @@ Dieses Projekt ist Teil der Unterrichtsmaterialien für das Modul *Computergrafi
 
 Hier entsteht eine Liste aller abgegebenen Lösungen.
 
--   [Aufgabe 1: Rote Scheibe auf Blau](doc/a01.md)
+-   [Aufgabe 1: Kreisscheibe auf Hintergrund](doc/a01.md)
 
 ## Struktur
 
@@ -16,7 +16,7 @@ Das Repository enthält über den Verlauf des Semesters alle Lösungsabgaben fü
 
 1.  Eine **Dokumentation** der Lösung
 
-    Die Erläuterungen befindet sich in einer Datei im Verzeichnis `doc`, und werden im [Markdown Format](https://daringfireball.net/projects/markdown/) verfasst. Jede Doku enthält als erstes ein aussagekräftiges Bild, das mit der Lösung erzeugt wurde. Danach werden die wichtigsten Details des Lösungsansatzes, unter Nennung aller externen Quellen, erläutert.
+    Die Erläuterungen befindet sich in einer Datei im Verzeichnis `doc`, und werden im [Markdown Format](https://daringfireball.net/projects/markdown/) verfasst. Jede Doku enthält als erstes mindestens ein aussagekräftiges Bild, das mit der Lösung erzeugt wurde. Danach werden die wichtigsten Details des Lösungsansatzes, unter Nennung aller externen Quellen, *kurz* erläutert.
 
     Die Datei wird nach der *Id* der Aufgabenstellung benannt. Für die erste Aufgabe lautet der Dateiname z.B. [`a01.md`](doc/a01.md).
 
@@ -27,5 +27,7 @@ Das Repository enthält über den Verlauf des Semesters alle Lösungsabgaben fü
     Im Paket `tramberend7215` können (und sollten) sich natürlich weitere Pakete befinden, die von mehreren Lösungen gemeinsam verwendet werden.
 
 Die termingerechte Abgabe einer Lösung wird durch das Setzen eines *Tags* auf den entsprechenden *Commit* des Repositories dokumentiert. Der Name des *Tags* leitet sich aus der *Id* der Aufgabe ab, und lautet für die erste Aufgabe z.B. `abgabe-a01`.
+
+**Bitte entfernen Sie diesen Einführungstext vor Abgabe der ersten Aufgabe.**
 
 <!-- vim: set spelllang=de: -->

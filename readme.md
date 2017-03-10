@@ -1,4 +1,4 @@
-# Computergrafik I
+# Computergrafik Grundlagen
 
 ## Musterprojekt für die Abgabe der Übungsaufgaben
 

@@ -1,9 +1,9 @@
-package tramberend7215.a01;
+package tramberend7215;
 
 import cgtools.Vec3;
 import java.io.IOException;
 
-class Image {
+public class Image {
     public Image(int width, int height) {}
 
     public void setPixel(int x, int y, Vec3 color) {}

@@ -2,6 +2,7 @@ package tramberend7215.a01;
 
 import cgtools.Vec3;
 import java.io.IOException;
+import tramberend7215.Image;
 
 public class Main {
     public static void main(String[] args) {

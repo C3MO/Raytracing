@@ -5,10 +5,10 @@ import java.io.IOException;
 import tramberend7215.Image;
 
 public class Main {
-    public static void main(String[] args) {
-        int width = 160;
-        int height = 90;
+    static int width = 160;
+    static int height = 90;
 
+    public static void main(String[] args) {
         Image image = new Image(width, height);
 
         for (int x = 0; x != width; x++) {

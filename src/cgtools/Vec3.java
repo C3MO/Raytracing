@@ -111,7 +111,7 @@ public class Vec3 {
     }
 
     /**
-     * Calculates the dot product between this vector and the provided vector. This vector is
+     * Calculates the cross product between this vector and the provided vector. This vector is
      * modified!
      */
     public Vec3 cross(Vec3 v) {
@@ -124,7 +124,7 @@ public class Vec3 {
         return this;
     }
 
-    /** Calculates the dot product between the two provided vectors. */
+    /** Calculates the cross product between the two provided vectors. */
     public static Vec3 cross(Vec3 a, Vec3 b) {
         return new Vec3(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
     }
@@ -166,10 +166,8 @@ public class Vec3 {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Vec3))
-            return false;
-        if (o == this)
-            return true;
+        if (!(o instanceof Vec3)) return false;
+        if (o == this) return true;
         Vec3 v = (Vec3) o;
         return v.x == x && v.y == y && v.z == z;
     }

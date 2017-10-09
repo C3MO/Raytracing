@@ -13,16 +13,17 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 /**
- * A simple image writer that takes an array of pixel components and the image size and writes the
- * corresponding image in 16-bit PNG format to the provided location.
+ * A simple image writer that takes an array of pixel components and the image
+ * size and writes the corresponding image in 16-bit PNG format to the provided
+ * location.
  */
 public class ImageWriter {
     private BufferedImage image;
     /**
      * Creates a new writer instance for the provided image data.
      *
-     * @param data An array of 3*width*height double precision RGB pixel components. Component
-     *     values are clipped to the interval [0.0, 1.0].
+     * @param data An array of 3*width*height double precision RGB pixel
+     *     components. Component values are clipped to the interval [0.0, 1.0].
      * @param width The width of the array in pixels.
      * @param height The height of the array in pixels.
      */

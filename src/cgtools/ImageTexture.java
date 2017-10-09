@@ -5,6 +5,7 @@ import java.awt.image.DataBuffer;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import static cgtools.Vec3.*;
 
 public class ImageTexture {
     private BufferedImage image;
@@ -20,15 +21,15 @@ public class ImageTexture {
         pixelBuffer = new double[image.getRaster().getNumBands()];
 
         switch (image.getSampleModel().getDataType()) {
-            case DataBuffer.TYPE_BYTE:
-                componentScale = 255;
-                break;
-            case DataBuffer.TYPE_USHORT:
-                componentScale = 65535;
-                break;
-            default:
-                componentScale = 1;
-                break;
+        case DataBuffer.TYPE_BYTE:
+            componentScale = 255;
+            break;
+        case DataBuffer.TYPE_USHORT:
+            componentScale = 65535;
+            break;
+        default:
+            componentScale = 1;
+            break;
         }
     }
 
@@ -36,7 +37,7 @@ public class ImageTexture {
         int x = (int) ((u - Math.floor(u)) * width);
         int y = (int) ((v - Math.floor(v)) * height);
         image.getRaster().getPixel(x, y, pixelBuffer);
-        Vec3 color = new Vec3(pixelBuffer[0], pixelBuffer[1], pixelBuffer[2]).div(componentScale);
-        return color;
+        Vec3 color = vec3(pixelBuffer[0], pixelBuffer[1], pixelBuffer[2]);
+        return divide(color, componentScale);
     }
 }

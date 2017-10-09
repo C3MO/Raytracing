@@ -1,6 +1,7 @@
 package tramberend7215.a01;
 
 import cgtools.Vec3;
+import static cgtools.Vec3.*;
 import java.io.IOException;
 import tramberend7215.Image;
 
@@ -22,12 +23,11 @@ public class Main {
             image.write(filename);
             System.out.println("Wrote image: " + filename);
         } catch (IOException error) {
-            System.out.println(
-                    String.format("Something went wrong writing: %s: %s", filename, error));
+            System.out.println(String.format("Something went wrong writing: %s: %s", filename, error));
         }
     }
 
     static Vec3 pixelColor(int x, int y) {
-        return new Vec3(0.5, 0.5, 0.5);
+        return vec3(0.5, 0.5, 0.5);
     }
 }

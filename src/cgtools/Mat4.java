@@ -1,39 +1,27 @@
 package cgtools;
 
+import static cgtools.Vec3.*;
+
 /**
- * A simple 4x4 matrix class using double values. Matrices are non-mutable and can be passed around
- * as values. The matrix is stored in one double array in column-major format.
+ * A simple 4x4 matrix class using double values. Matrices are non-mutable and
+ * can be passed around as values. The matrix is stored in one double array in
+ * column-major format.
  *
  * @author henrik
  */
 public final class Mat4 {
     /** <code>identity</code> The identity matrix. */
-    public static final Mat4 identity = new Mat4().makeIdent();
+    public static final Mat4 identity = new Mat4().makeIdentity();
 
     private double[] values;
 
     private Mat4() {
-        makeIdent();
+        makeIdentity();
     }
 
-    public Mat4(
-            double m00,
-            double m01,
-            double m02,
-            double m03,
-            double m10,
-            double m11,
-            double m12,
-            double m13,
-            double m20,
-            double m21,
-            double m22,
-            double m23,
-            double m30,
-            double m31,
-            double m32,
-            double m33) {
-        makeIdent();
+    public Mat4(double m00, double m01, double m02, double m03, double m10, double m11, double m12, double m13,
+            double m20, double m21, double m22, double m23, double m30, double m31, double m32, double m33) {
+        makeIdentity();
         set(0, 0, m00);
         set(0, 1, m01);
         set(0, 2, m02);
@@ -60,7 +48,7 @@ public final class Mat4 {
      * @param b2 The third basis Vec3.
      */
     public Mat4(Vec3 b0, Vec3 b1, Vec3 b2) {
-        makeIdent();
+        makeIdentity();
         set(0, 0, b0.x);
         set(1, 0, b0.y);
         set(2, 0, b0.z);
@@ -136,7 +124,7 @@ public final class Mat4 {
     }
 
     public static Mat4 rotate(double ax, double ay, double az, double angle) {
-        return rotate(new Vec3(ax, ay, az), angle);
+        return rotate(vec3(ax, ay, az), angle);
     }
 
     /**
@@ -189,7 +177,7 @@ public final class Mat4 {
      * @param m The second matrix.
      * @return The product.
      */
-    public Mat4 mult(Mat4 m) {
+    public Mat4 multiply(Mat4 m) {
         // Optimzed version.
         Mat4 n = new Mat4();
         {
@@ -331,12 +319,13 @@ public final class Mat4 {
         return n;
     }
 
-    public Mat4 multSlow(Mat4 m) {
+    protected Mat4 multSlow(Mat4 m) {
         Mat4 n = new Mat4();
         for (int c = 0; c != 4; c++) {
             for (int r = 0; r != 4; r++) {
                 double v = 0;
-                for (int k = 0; k != 4; k++) v += get(k, r) * m.get(c, k);
+                for (int k = 0; k != 4; k++)
+                    v += get(k, r) * m.get(c, k);
                 n.set(c, r, v);
             }
         }
@@ -344,7 +333,8 @@ public final class Mat4 {
     }
 
     /**
-     * Transform a point by the current matrix. The homogenous coordinate is assumed to be 1.0.
+     * Transform a point by the current matrix. The homogenous coordinate is
+     * assumed to be 1.0.
      *
      * @param v The point.
      * @return The transformed point.
@@ -353,11 +343,12 @@ public final class Mat4 {
         final double x = get(0, 0) * v.x + get(1, 0) * v.y + get(2, 0) * v.z + get(3, 0);
         final double y = get(0, 1) * v.x + get(1, 1) * v.y + get(2, 1) * v.z + get(3, 1);
         final double z = get(0, 2) * v.x + get(1, 2) * v.y + get(2, 2) * v.z + get(3, 2);
-        return new Vec3(x, y, z);
+        return vec3(x, y, z);
     }
 
     /**
-     * Transform a direction by the current matrix. The homogenous coordinate is assumed to be 0.0.
+     * Transform a direction by the current matrix. The homogenous coordinate is
+     * assumed to be 0.0.
      *
      * @param v The direction Vec3.
      * @return The transformed point.
@@ -366,7 +357,7 @@ public final class Mat4 {
         double x = get(0, 0) * v.x + get(1, 0) * v.y + get(2, 0) * v.z;
         double y = get(0, 1) * v.x + get(1, 1) * v.y + get(2, 1) * v.z;
         double z = get(0, 2) * v.x + get(1, 2) * v.y + get(2, 2) * v.z;
-        return new Vec3(x, y, z);
+        return vec3(x, y, z);
     }
 
     public Mat4 transpose() {
@@ -384,7 +375,7 @@ public final class Mat4 {
      *
      * @return The inverse matrix.
      */
-    public Mat4 invertRigid() {
+    protected Mat4 invertRigid() {
         /*
          * this only works for rigid body transformations!
          */
@@ -393,7 +384,9 @@ public final class Mat4 {
          * submatrix.
          */
         Mat4 ri = new Mat4();
-        for (int c = 0; c != 3; c++) for (int r = 0; r != 3; r++) ri.set(c, r, get(r, c));
+        for (int c = 0; c != 3; c++)
+            for (int r = 0; r != 3; r++)
+                ri.set(c, r, get(r, c));
         /*
          * calculate the inverse translation
          */
@@ -401,10 +394,10 @@ public final class Mat4 {
         ti.set(3, 0, -get(3, 0));
         ti.set(3, 1, -get(3, 1));
         ti.set(3, 2, -get(3, 2));
-        return ri.mult(ti);
+        return ri.multiply(ti);
     }
 
-    private Mat4 makeIdent() {
+    private Mat4 makeIdentity() {
         values = new double[16];
         set(0, 0, 1.0f);
         set(1, 1, 1.0f);
@@ -523,8 +516,8 @@ public final class Mat4 {
     }
 
     /**
-     * Get the array of 16 matrix values. This returns the internal represenatation of the matrix in
-     * OpenGL compatible column-major format.
+     * Get the array of 16 matrix values. This returns the internal
+     * represenatation of the matrix in OpenGL compatible column-major format.
      *
      * @return The array of matrix values.
      */
@@ -570,7 +563,7 @@ public final class Mat4 {
      * @return The newly constructed Vec3.
      */
     public Vec3 getPosition() {
-        return new Vec3(get(3, 0), get(3, 1), get(3, 2));
+        return vec3(get(3, 0), get(3, 1), get(3, 2));
     }
 
     /*
@@ -579,25 +572,32 @@ public final class Mat4 {
     public String toString() {
         String s = "";
         for (int r = 0; r < 4; r++) {
-            s += "[ ";
+            s += "( ";
             for (int c = 0; c < 4; c++) {
                 s += get(c, r) + " ";
             }
-            s += "]\n";
+            s += ")\n";
         }
         return s;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Mat4)) return false;
+        if (!(o instanceof Mat4))
+            return false;
+        if (o == this)
+            return true;
         Mat4 m = (Mat4) o;
-        for (int i = 0; i != 16; i++) if (values[i] != m.values[i]) return false;
+        for (int i = 0; i != 16; i++)
+            if (values[i] != m.values[i])
+                return false;
         return true;
     }
 
     public boolean equals(Mat4 m, double epsilon) {
-        for (int i = 0; i != 16; i++) if (Math.abs(values[i] - m.values[i]) > epsilon) return false;
+        for (int i = 0; i != 16; i++)
+            if (Math.abs(values[i] - m.values[i]) > epsilon)
+                return false;
         return true;
     }
 }

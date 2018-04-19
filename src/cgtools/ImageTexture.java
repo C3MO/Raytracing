@@ -7,7 +7,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import static cgtools.Vec3.*;
 
-public class ImageTexture {
+public class ImageTexture implements Sampler {
     private BufferedImage image;
     public final int width;
     public final int height;
@@ -33,7 +33,7 @@ public class ImageTexture {
         }
     }
 
-    public Vec3 samplePoint(double u, double v) {
+    public Vec3 color(double u, double v) {
         int x = (int) ((u - Math.floor(u)) * width);
         int y = (int) ((v - Math.floor(v)) * height);
         image.getRaster().getPixel(x, y, pixelBuffer);

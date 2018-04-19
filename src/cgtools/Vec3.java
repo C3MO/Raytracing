@@ -134,22 +134,24 @@ public class Vec3 {
         return vec3(Math.min(1, Math.max(v.x, 0)), Math.min(1, Math.max(v.y, 0)), Math.min(1, Math.max(v.z, 0)));
     }
 
-    public static Vec3 hue(double h) {
+    public static Vec3 hsvToRgb(Vec3 hsv) {
+        return multiply(hsv.z, add(multiply(hsv.y, subtract(hue(hsv.x), one)), one));
+    }
+
+    public static final Vec3 one = vec3(1, 1, 1);
+    public static final Vec3 black = vec3(0, 0, 0);
+    public static final Vec3 gray = vec3(0.5, 0.5, 0.5);
+    public static final Vec3 white = vec3(1, 1, 1);
+    public static final Vec3 red = vec3(1, 0, 0);
+    public static final Vec3 green = vec3(0, 1, 0);
+    public static final Vec3 blue = vec3(0, 0, 1);
+
+    public static final Vec3 zero = vec3(0, 0, 0);
+
+    private static Vec3 hue(double h) {
         double r = Math.abs(h * 6 - 3) - 1;
         double g = 2 - Math.abs(h * 6 - 2);
         double b = 2 - Math.abs(h * 6 - 4);
         return clamp(vec3(r, g, b));
     }
-
-    public static Vec3 hsvToRgb(Vec3 hsv) {
-        return multiply(hsv.z, add(multiply(hsv.y, subtract(hue(hsv.x), one)), one));
-    }
-
-    public static final Vec3 zero = vec3(0, 0, 0);
-    public static final Vec3 one = vec3(1, 1, 1);
-    public static final Vec3 black = vec3(0, 0, 0);
-    public static final Vec3 white = vec3(1, 1, 1);
-    public static final Vec3 red = vec3(1, 0, 0);
-    public static final Vec3 green = vec3(0, 1, 0);
-    public static final Vec3 blue = vec3(0, 0, 1);
 }

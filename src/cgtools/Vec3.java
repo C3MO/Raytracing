@@ -61,6 +61,11 @@ public class Vec3 {
         return vec3(s * a.x, s * a.y, s * a.z);
     }
 
+    /** Multplies the given vector with the scalar value. */
+    public static Vec3 multiply(Vec3 a, double s) {
+        return vec3(s * a.x, s * a.y, s * a.z);
+    }
+
     /** Divides the given vector by the scalar value. */
     public static Vec3 divide(Vec3 a, double s) {
         return vec3(a.x / s, a.y / s, a.z / s);
@@ -147,6 +152,12 @@ public class Vec3 {
     public static final Vec3 blue = vec3(0, 0, 1);
 
     public static final Vec3 zero = vec3(0, 0, 0);
+    public static final Vec3 xAxis = vec3(1, 0, 0);
+    public static final Vec3 yAxis = vec3(0, 1, 0);
+    public static final Vec3 zAxis = vec3(0, 0, 1);
+    public static final Vec3 nxAxis = vec3(-1, 0, 0);
+    public static final Vec3 nyAxis = vec3(0, -1, 0);
+    public static final Vec3 nzAxis = vec3(0, 0, -1);
 
     private static Vec3 hue(double h) {
         double r = Math.abs(h * 6 - 3) - 1;

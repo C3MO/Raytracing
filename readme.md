@@ -12,7 +12,7 @@ Im Verzeichnis `src` befindet sich für die Lösung jeder Aufgabe ein Java-Paket
 
 Im Paket `tramberend7215` können (und sollten) sich natürlich weitere Pakete befinden, die von mehreren Lösungen gemeinsam verwendet werden.
 
-Die termingerechte Abgabe einer Lösung wird durch das Setzen eines *Tags* auf den entsprechenden *Commit* des Repositories dokumentiert. Der Name des *Tags* leitet sich aus der *Id* der Aufgabe ab, und lautet für die erste Aufgabe z.B. `cgg-17ws-a01`.
+Die termingerechte Abgabe einer Lösung wird durch das Setzen eines *Tags* auf den entsprechenden *Commit* des Repositories dokumentiert. Der Name des *Tags* leitet sich aus der *Id* der Aufgabe ab, und lautet für die erste Aufgabe z.B. `a01`.
 
 **Bitte entfernen Sie diesen Einführungstext vor Abgabe der ersten Aufgabe.**
 

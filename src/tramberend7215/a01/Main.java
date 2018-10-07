@@ -27,7 +27,7 @@ public class Main {
         }
     }
 
-    static Vec3 pixelColor(int x, int y) {
+    static Vec3 pixelColor(double x, double y) {
         return vec3(0.5, 0.5, 0.5);
     }
 }

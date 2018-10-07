@@ -61,6 +61,11 @@ public class Vec3 {
         return vec3(s * a.x, s * a.y, s * a.z);
     }
 
+    /** Multplies the given vector with the scalar value. */
+    public static Vec3 multiply(Vec3 a, double s) {
+        return vec3(s * a.x, s * a.y, s * a.z);
+    }
+
     /** Divides the given vector by the scalar value. */
     public static Vec3 divide(Vec3 a, double s) {
         return vec3(a.x / s, a.y / s, a.z / s);
@@ -134,22 +139,30 @@ public class Vec3 {
         return vec3(Math.min(1, Math.max(v.x, 0)), Math.min(1, Math.max(v.y, 0)), Math.min(1, Math.max(v.z, 0)));
     }
 
-    public static Vec3 hue(double h) {
+    public static Vec3 hsvToRgb(Vec3 hsv) {
+        return multiply(hsv.z, add(multiply(hsv.y, subtract(hue(hsv.x), one)), one));
+    }
+
+    public static final Vec3 one = vec3(1, 1, 1);
+    public static final Vec3 black = vec3(0, 0, 0);
+    public static final Vec3 gray = vec3(0.5, 0.5, 0.5);
+    public static final Vec3 white = vec3(1, 1, 1);
+    public static final Vec3 red = vec3(1, 0, 0);
+    public static final Vec3 green = vec3(0, 1, 0);
+    public static final Vec3 blue = vec3(0, 0, 1);
+
+    public static final Vec3 zero = vec3(0, 0, 0);
+    public static final Vec3 xAxis = vec3(1, 0, 0);
+    public static final Vec3 yAxis = vec3(0, 1, 0);
+    public static final Vec3 zAxis = vec3(0, 0, 1);
+    public static final Vec3 nxAxis = vec3(-1, 0, 0);
+    public static final Vec3 nyAxis = vec3(0, -1, 0);
+    public static final Vec3 nzAxis = vec3(0, 0, -1);
+
+    private static Vec3 hue(double h) {
         double r = Math.abs(h * 6 - 3) - 1;
         double g = 2 - Math.abs(h * 6 - 2);
         double b = 2 - Math.abs(h * 6 - 4);
         return clamp(vec3(r, g, b));
     }
-
-    public static Vec3 hsvToRgb(Vec3 hsv) {
-        return multiply(hsv.z, add(multiply(hsv.y, subtract(hue(hsv.x), one)), one));
-    }
-
-    public static final Vec3 zero = vec3(0, 0, 0);
-    public static final Vec3 one = vec3(1, 1, 1);
-    public static final Vec3 black = vec3(0, 0, 0);
-    public static final Vec3 white = vec3(1, 1, 1);
-    public static final Vec3 red = vec3(1, 0, 0);
-    public static final Vec3 green = vec3(0, 1, 0);
-    public static final Vec3 blue = vec3(0, 0, 1);
 }

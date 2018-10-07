@@ -94,7 +94,7 @@ public final class Mat4 {
     /**
      * Construct a new matrix that represents a rotation.
      *
-     * @param axis The rotation axis.
+     * @param axis  The rotation axis.
      * @param angle The angle of rotaion in degree.
      * @return The rotation matrix.
      */
@@ -333,8 +333,8 @@ public final class Mat4 {
     }
 
     /**
-     * Transform a point by the current matrix. The homogenous coordinate is
-     * assumed to be 1.0.
+     * Transform a point by the current matrix. The homogenous coordinate is assumed
+     * to be 1.0.
      *
      * @param v The point.
      * @return The transformed point.
@@ -360,6 +360,20 @@ public final class Mat4 {
         return vec3(x, y, z);
     }
 
+    /**
+     * Transform a direction by the inverse of the current matrix. The homogenous
+     * coordinate is assumed to be 0.0.
+     *
+     * @param v The direction Vec3.
+     * @return The transformed direction.
+     */
+    public Vec3 transformInverseDirection(Vec3 v) {
+        double x = get(0, 0) * v.x + get(0, 1) * v.y + get(0, 2) * v.z;
+        double y = get(1, 0) * v.x + get(1, 1) * v.y + get(1, 2) * v.z;
+        double z = get(2, 0) * v.x + get(2, 1) * v.y + get(2, 2) * v.z;
+        return vec3(x, y, z);
+    }
+
     public Mat4 transpose() {
         Mat4 n = new Mat4();
         for (int c = 0; c != 4; c++) {
@@ -380,8 +394,7 @@ public final class Mat4 {
          * this only works for rigid body transformations!
          */
         /*
-         * calculate the inverse rotation by transposing the upper 3x3
-         * submatrix.
+         * calculate the inverse rotation by transposing the upper 3x3 submatrix.
          */
         Mat4 ri = new Mat4();
         for (int c = 0; c != 3; c++)
@@ -516,8 +529,8 @@ public final class Mat4 {
     }
 
     /**
-     * Get the array of 16 matrix values. This returns the internal
-     * represenatation of the matrix in OpenGL compatible column-major format.
+     * Get the array of 16 matrix values. This returns the internal represenatation
+     * of the matrix in OpenGL compatible column-major format.
      *
      * @return The array of matrix values.
      */

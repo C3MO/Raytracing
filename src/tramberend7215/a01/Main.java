@@ -26,7 +26,7 @@ public class Main {
             }
         }
 
-        ConstantColor allGray = new ConstantColor(Vec3.gray);
+        ConstantColor allGray = new ConstantColor(Vec3.red);
         for (int x = 0; x != width; x++) {
             for (int y = 0; y != height; y++) {
                 image.setPixel(x, y, allGray.pixelColor(x, y));

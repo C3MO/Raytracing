@@ -32,7 +32,7 @@ public class Main {
                 image.setPixel(x, y, allGray.pixelColor(x, y));
             }
         }
-        write(image, "doc/a01.png");
+        write(image, "doc/a02.png");
     }
 
     static void write(Image image, String filename) {

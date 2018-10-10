@@ -61,8 +61,8 @@ public class ImageWriter {
         ImageIO.write(image, "png", outputfile);
     }
 
-    public static void write(String filename, double[] data, int width, int height) throws IOException {
-        write(filename, data, width, height, true);
+    public static void write(String filename) throws IOException {
+        write(filename);
     }
 
     private static double clamp(double v) {

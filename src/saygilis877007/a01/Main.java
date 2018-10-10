@@ -1,10 +1,10 @@
-package tramberend7215.a01;
+package saygilis877007.a01;
 
 import cgtools.Vec3;
-import static cgtools.Vec3.*;
+
 import java.io.IOException;
-import java.util.function.*;
-import tramberend7215.Image;
+
+import saygilis877007.Image;
 
 public class Main {
 

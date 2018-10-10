@@ -19,7 +19,19 @@ public class Image {
     }
 
     public void setPixel(int x, int y, Vec3 color) {
-        //System.out.println("Image not yet implemented.");
+        for (int h = 0; y < height; y++) {
+            for (int k = 0; x < width; x++) {
+
+                int a = (int) (Math.random() * 256); //alpha
+                int r = (int) (Math.random() * 256); //red
+                int g = (int) (Math.random() * 256); //green
+                int b = (int) (Math.random() * 256); //blue
+
+                int p = (a << 24) | (r << 16) | (g << 8) | b; //pixel
+
+                image.setRGB(x, y, p);
+            }
+        }
     }
 
     public void write(String filename) throws IOException {

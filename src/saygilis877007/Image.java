@@ -3,7 +3,6 @@ package saygilis877007;
 import cgtools.Vec3;
 
 import javax.imageio.ImageIO;
-import java.awt.color.ColorSpace;
 import java.awt.image.*;
 import java.io.File;
 import java.io.IOException;
@@ -22,12 +21,12 @@ public class Image {
         for (int h = 0; y < height; y++) {
             for (int k = 0; x < width; x++) {
 
-                int a = (int) (Math.random() * 256); //alpha
-                int r = (int) (Math.random() * 256); //red
-                int g = (int) (Math.random() * 256); //green
-                int b = (int) (Math.random() * 256); //blue
+                //int a = (int) (Math.random() * 256); //alpha
+                int r = (int) (y * 256); //red
+                //int g = (int) (Math.random() * 256); //green
+               // int b = (int) (Math.random() * 256); //blue
 
-                int p = (a << 24) | (r << 16) | (g << 8) | b; //pixel
+                int p = (r << 24); //| (r << 16) | (g << 8) | b; //pixel
 
                 image.setRGB(x, y, p);
             }

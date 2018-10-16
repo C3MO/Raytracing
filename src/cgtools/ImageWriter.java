@@ -51,12 +51,14 @@ public class ImageWriter {
         /* Convert double data to ushort pixels. */
         for (int y = 0; y != height; y++) {
             for (int x = 0; x != width; x++) {
+
                 int i = (width * y + x) * 3;
                 int[] rgb = { (int) (clamp(data[i + 0]) * 65535.0), (int) (clamp(data[i + 1]) * 65535.0),
                         (int) (clamp(data[i + 2]) * 65535.0) };
                 raster.setPixel(x, y, rgb);
             }
         }
+
         File outputfile = new File(filename);
         ImageIO.write(image, "png", outputfile);
     }

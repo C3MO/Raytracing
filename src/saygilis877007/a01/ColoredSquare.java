@@ -31,18 +31,17 @@ public class ColoredSquare {
     }
     public void setPixel(int x, int y, Vec3 color) throws IOException{
 
-        ColoredSquare farben = new ColoredSquare(Vec3.red);
+        ColoredSquare farben = new ColoredSquare(Vec3.green);
         for (x = 0; x != width; x++) {
             for (y = 0; y != height; y++) {
+
                 image.setPixel(x, y, farben.pixelColor(x, y));
             }
         }
 
-        write(image,"doc/a01-square.png");
-
             }
 
-    public void write(Image image, String filename) throws IOException {
+    public void write(String filename) throws IOException {
 
         File outputfile = new File(filename);
         ImageIO.write((RenderedImage) this.image, "png", outputfile);

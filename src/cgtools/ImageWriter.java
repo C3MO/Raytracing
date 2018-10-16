@@ -18,56 +18,55 @@ import javax.imageio.ImageIO;
  * location.
  */
 public class ImageWriter {
-
+    private BufferedImage image;
     /**
      * Creates a new writer instance for the provided image data.
      *
+     * @param data An array of 3*width*height double precision RGB pixel
+     *     components. Component values are clipped to the interval [0.0, 1.0].
+     * @param width The width of the array in pixels.
+     * @param height The height of the array in pixels.
      */
-    private ImageWriter() {
+    public ImageWriter(double[] data, int width, int height) {
+        /* Setup an sRGB image with 16-bit components of the right size. */
+        ComponentColorModel ccm =
+                new ComponentColorModel(
+                        ColorSpace.getInstance(ColorSpace.CS_sRGB),
+                        false,
+                        false,
+                        ComponentColorModel.OPAQUE,
+                        DataBuffer.TYPE_USHORT);
+
+        WritableRaster raster =
+                Raster.createBandedRaster(DataBuffer.TYPE_USHORT, width, height, 3, null);
+        image = new BufferedImage(ccm, raster, false, null);
+
+        /* Convert double data to ushort pixels. */
+        for (int y = 0; y != height; y++) {
+            for (int x = 0; x != width; x++) {
+                int i = (width * y + x) * 3;
+                int[] rgb = {
+                        (int) (clamp(data[i + 0]) * 65535.0),
+                        (int) (clamp(data[i + 1]) * 65535.0),
+                        (int) (clamp(data[i + 2]) * 65535.0)
+                };
+                raster.setPixel(x, y, rgb);
+            }
+        }
     }
 
     /**
      * Write the PNG image to a file with the provided name.
      *
      * @param filename Name of the image file.
-     * @param data An array of 3*width*height double precision RGB pixel
-     *     components. Component values are clipped to the interval [0.0, 1.0].
-     * @param width The width of the array in pixels.
-     * @param height The height of the array in pixels.
-     * @param linear Use linear color encoding.
      * @throws IOException If anything goes wrong.
      */
-     public static void write(String filename, double[] data, int width, int height, boolean linear) throws IOException {
-        /* Setup an sRGB image with 16-bit components of the right size. */
-        int cs = ColorSpace.CS_sRGB;
-        if (linear)
-            cs = ColorSpace.CS_LINEAR_RGB;
-        ComponentColorModel ccm = new ComponentColorModel(ColorSpace.getInstance(cs), false, false,
-                ComponentColorModel.OPAQUE, DataBuffer.TYPE_USHORT);
-
-        WritableRaster raster = Raster.createBandedRaster(DataBuffer.TYPE_USHORT, width, height, 3, null);
-        BufferedImage image = new BufferedImage(ccm, raster, false, null);
-
-        /* Convert double data to ushort pixels. */
-        for (int y = 0; y != height; y++) {
-            for (int x = 0; x != width; x++) {
-
-                int i = (width * y + x) * 3;
-                int[] rgb = { (int) (clamp(data[i + 0]) * 65535.0), (int) (clamp(data[i + 1]) * 65535.0),
-                        (int) (clamp(data[i + 2]) * 65535.0) };
-                raster.setPixel(x, y, rgb);
-            }
-        }
-
+    public void write(String filename) throws IOException {
         File outputfile = new File(filename);
         ImageIO.write(image, "png", outputfile);
     }
 
-    public static void write(String filename) throws IOException {
-        write(filename);
-    }
-
-    private static double clamp(double v) {
+    private double clamp(double v) {
         return Math.min(Math.max(0, v), 1);
     }
 }

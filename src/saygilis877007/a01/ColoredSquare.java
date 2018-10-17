@@ -40,13 +40,13 @@ public class ColoredSquare {
                 z = x / squarePart + y / squarePart;
                 if ((x > width / c - zposition) && (x < width / c + zposition) && (y > height / c - zposition) && (y < height / c + zposition)) {
                     return new Vec3(1, 0, 0.9);
-                } else if (z % c == b) {            //Background Schachbrett
+                } else if (z % c == b) {
                     return new Vec3(0, 0, 0);
                 } else {
 
                     return color;
                 }
-
+                   
 
             }
         }
@@ -58,7 +58,7 @@ public class ColoredSquare {
                 image.setPixel(x, y, color.pixelColor(x, y));
             }
         }
-        write(image, "doc/a01-square.png");
+        write(image, "doc/a01-checkered-background.png");
     }
 
     static void write(Image image, String filename) {

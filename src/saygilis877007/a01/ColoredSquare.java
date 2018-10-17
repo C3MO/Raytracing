@@ -1,6 +1,4 @@
 package saygilis877007.a01;
-
-import cgtools.ImageWriter;
 import cgtools.Vec3;
 import saygilis877007.Image;
 

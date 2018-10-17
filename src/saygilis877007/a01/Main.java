@@ -1,9 +1,7 @@
 package saygilis877007.a01;
 
 import cgtools.Vec3;
-
 import java.io.IOException;
-
 import saygilis877007.Image;
 
 
@@ -28,8 +26,8 @@ public class Main {
         try {
             image.write(filename);
             System.out.println("Wrote image: " + filename);
-        } catch (IOException error) {
-            System.out.println(String.format("Something went wrong writing ", filename, error));
+        } catch (IOException err) {
+            System.out.println(String.format("Something went wrong writing ", filename, err));
         }
     }
 

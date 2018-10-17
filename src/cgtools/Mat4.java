@@ -100,26 +100,26 @@ public final class Mat4 {
      */
     public static Mat4 rotate(Vec3 axis, double angle) {
         final Mat4 m = new Mat4();
-        final double rad = (angle / 180.0f) * ((double) Math.PI);
-        final double cosa = (double) Math.cos(rad);
-        final double sina = (double) Math.sin(rad);
+        final double rad = (angle / 180.0f) * Math.PI;
+        final double cosa = Math.cos(rad);
+        final double sina = Math.sin(rad);
         final double l = Math.sqrt(axis.x * axis.x + axis.y * axis.y + axis.z * axis.z);
         final double rx = axis.x / l;
         final double ry = axis.y / l;
         final double rz = axis.z / l;
         final double icosa = 1 - cosa;
 
-        m.set(0, 0, (double) (icosa * rx * rx + cosa));
-        m.set(0, 1, (double) (icosa * rx * ry + rz * sina));
-        m.set(0, 2, (double) (icosa * rx * rz - ry * sina));
+        m.set(0, 0, icosa * rx * rx + cosa);
+        m.set(0, 1, icosa * rx * ry + rz * sina);
+        m.set(0, 2, icosa * rx * rz - ry * sina);
 
-        m.set(1, 0, (double) (icosa * rx * ry - rz * sina));
-        m.set(1, 1, (double) (icosa * ry * ry + cosa));
-        m.set(1, 2, (double) (icosa * ry * rz + rx * sina));
+        m.set(1, 0, icosa * rx * ry - rz * sina);
+        m.set(1, 1, icosa * ry * ry + cosa);
+        m.set(1, 2, icosa * ry * rz + rx * sina);
 
-        m.set(2, 0, (double) (icosa * rx * rz + ry * sina));
-        m.set(2, 1, (double) (icosa * ry * rz - rx * sina));
-        m.set(2, 2, (double) (icosa * rz * rz + cosa));
+        m.set(2, 0, icosa * rx * rz + ry * sina);
+        m.set(2, 1, icosa * ry * rz - rx * sina);
+        m.set(2, 2, icosa * rz * rz + cosa);
         return m;
     }
 

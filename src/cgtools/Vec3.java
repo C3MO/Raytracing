@@ -6,7 +6,9 @@
 package cgtools;
 
 public class Vec3 {
-    public final double x, y, z;
+    public double x;
+    public double y;
+    public double z;
 
     /** Creates a new vector with the given coordinates */
     public Vec3(double x, double y, double z) {

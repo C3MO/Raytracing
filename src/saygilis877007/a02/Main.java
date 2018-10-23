@@ -12,10 +12,10 @@ import java.util.Collections;
  * Created by home on 17.10.18.
  */
 public class Main {
-    static int width = 360;
-    static int heigth = 240;
-    static int circles = 25; //Anzahl der Kreise
-    static double n = 15;   //Sampling der Kreise
+    static int width = 1280;
+    static int heigth = 720;
+    static int circles = 250; //Anzahl der Kreise
+    static double n = 10;   //Sampling der Kreise
 
     public static void main(String[] args) {
         ArrayList<Circle> listCircles = listCircles(circles);
@@ -25,13 +25,13 @@ public class Main {
             for (int j = 0; j != heigth; j++) {
                 Vec3 vec = new Vec3(0, 0, 0);
 
-               for (int xi = 0; xi < n; xi++) {                                        //Das Sampling der Pixel
+               for (int xi = 0; xi < n; xi++) {
                     for (int yi = 0; yi < n; yi++) {
                         double rx = cgtools.Random.random();
                         double ry = cgtools.Random.random();
 
-                        double xs = (i + (yi+ rx));
-                        double ys = (j + (xi+ ry));
+                        double xs = (i + (xi+ rx) / n);
+                        double ys = (j + (yi+ ry) / n);
                         vec = Vec3.add(vec, pixelColor(xs, ys, listCircles));
                     }
                 }
@@ -40,7 +40,7 @@ public class Main {
             }
         }
 
-        String filename = "doc/a02-discs.png";
+        String filename = "doc/a02-supersampling.png";
         try {
             image.write(filename);
             System.out.println("Wrote image: " + filename);
@@ -56,7 +56,7 @@ public class Main {
         Random random = new Random();
 
         for (int i = 0; i < anzahlKreise; i++) {
-            list.add(new Circle (random.nextInt(555), random.nextInt(200), random.nextInt(40) + 10,
+            list.add(new Circle (random.nextInt(1280), random.nextInt(720), random.nextInt(100) + 10,
                     new Vec3(random.nextDouble(), random.nextDouble(), random.nextDouble())));
         }
         Collections.sort(list);

@@ -45,4 +45,22 @@ public class Main {
         return list;
     }
 
+    static Vec3 pixelColor(double x, double y, ArrayList<Circle> kreisListe) {          //Den einzelnen Pixeln farben versehen
+        for (Circle kr : kreisListe) {
+            if (Math.sqrt((kr.getX() - x) * (kr.getX() - x) + (kr.getY() - y) * (kr.getY() - y)) <= kr.getRadius()) {
+                return kr.getCircleColor();
+            }
+        }
+        return new Vec3(1,1,1);
+    }
+
+
+    static Vec3 gamma(Vec3 color, double gamma) {
+        color.x = Math.pow(color.x, 1.0 / gamma);
+        color.y = Math.pow(color.y, 1.0 / gamma);
+        color.z = Math.pow(color.z, 1.0 / gamma);
+
+        return color;
+    }
+
 }

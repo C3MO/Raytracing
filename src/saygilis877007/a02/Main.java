@@ -22,7 +22,7 @@ public class Main {
         Image image = new Image(width, heigth);
 
 
-        String filename = "doc/a02-super-sampling.png";
+        String filename = "doc/a02-discs.png";
         try {
             image.write(filename);
             System.out.println("Wrote image: " + filename);

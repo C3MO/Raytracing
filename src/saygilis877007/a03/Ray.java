@@ -24,4 +24,11 @@ public class Ray {
      	public Vec3 pointAt(double t){
      		return Vec3.add(orgViktor, Vec3.multiply(t, dirVektor)); 
      	}
-}
+     	  	public boolean contains(double t) {
+     	  		if(t0 <= t && t <= t1 ){
+     	  			return true;
+     	  		}else{
+     	  			return false;
+     	  		}
+     	  		
+}         	}

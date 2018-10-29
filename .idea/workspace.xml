@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aebe2f91-e9e1-4c4a-8eda-bf22f3e52e41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Lochkamera.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Kugel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -42,8 +42,8 @@
       <file leaf-file-name="Hit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Hit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="15">
+              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="20" />
               <folding>
                 <element signature="e#459#460#0" expanded="true" />
                 <element signature="e#510#511#0" expanded="true" />
@@ -52,12 +52,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lochkamera.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lochkamera.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Lochkamera.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kugel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Kugel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,6 +121,7 @@
         <option value="$PROJECT_DIR$/src/saygilis877007/a03/Ray.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a03/Hit.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a03/Lochkamera.java" />
+        <option value="$PROJECT_DIR$/src/saygilis877007/a03/Kugel.java" />
       </list>
     </option>
   </component>
@@ -118,8 +132,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="813" />
-    <option name="y" value="42" />
+    <option name="x" value="354" />
+    <option name="y" value="53" />
     <option name="width" value="1636" />
     <option name="height" value="1027" />
   </component>
@@ -779,15 +793,15 @@
       <workItem from="1540367891914" duration="284000" />
       <workItem from="1540371498707" duration="133000" />
       <workItem from="1540383721610" duration="4000" />
-      <workItem from="1540805042365" duration="2107000" />
+      <workItem from="1540805042365" duration="2393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48991000" />
+    <option name="totallyTimeSpent" value="49277000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="813" y="42" width="1636" height="1027" extended-state="0" />
+    <frame x="354" y="53" width="1636" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -869,16 +883,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a02/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#523#524#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cgtools/Vec3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1310,17 +1314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Hit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cgtools/Random.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1334,6 +1327,28 @@
         <state relative-caret-position="360">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Hit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="20" />
+          <folding>
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Kugel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

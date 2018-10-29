@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aebe2f91-e9e1-4c4a-8eda-bf22f3e52e41" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Hit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a03/Ray.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Ray.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ray.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Ray.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -34,6 +34,19 @@
               <folding>
                 <element signature="e#619#620#0" expanded="true" />
                 <element signature="e#692#693#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hit.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Hit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+              <folding>
+                <element signature="e#565#566#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,6 +96,7 @@
         <option value="$PROJECT_DIR$/src/saygilis877007/a02/Circle.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a02/Main.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a03/Ray.java" />
+        <option value="$PROJECT_DIR$/src/saygilis877007/a03/Hit.java" />
       </list>
     </option>
   </component>
@@ -754,12 +768,12 @@
       <workItem from="1540367891914" duration="284000" />
       <workItem from="1540371498707" duration="133000" />
       <workItem from="1540383721610" duration="4000" />
-      <workItem from="1540805042365" duration="1197000" />
+      <workItem from="1540805042365" duration="1592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48081000" />
+    <option name="totallyTimeSpent" value="48476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="23" width="1636" height="1027" extended-state="6" />
@@ -844,16 +858,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/saygilis877007/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cgtools/Random.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1307,6 +1311,17 @@
           <folding>
             <element signature="e#619#620#0" expanded="true" />
             <element signature="e#692#693#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Hit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+          <folding>
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -10,7 +10,7 @@ public class Main {
 
     static int width = 1280;
     static int height = 720;
-    static int n = 15;
+    static int n = 10;
 
 
     public static void main(String[] args){
@@ -29,9 +29,9 @@ public class Main {
 
 
     static Vec3 gamma(Vec3 color, double gamma) {
-        color.x = Math.pow(color.x, 1.0 / gamma);
-        color.y = Math.pow(color.y, 1.0 / gamma);
-        color.z = Math.pow(color.z, 1.0 / gamma);
+        color.x = Math.pow(color.x, 2.2 / gamma);
+        color.y = Math.pow(color.y, 2.2 / gamma);
+        color.z = Math.pow(color.z, 2.2 / gamma);
 
         return color;
     }
@@ -58,7 +58,7 @@ public class Main {
                         if(hit!=null){
                             color = Vec3.add(hit.n, color);
                         }else{
-                            color = Vec3.add(Vec3.white, color);
+                            color = Vec3.add(Vec3.gray, color);
                         }
                     }
                 }

@@ -5,15 +5,10 @@ import cgtools.Vec3;
  * Created by home on 29.10.18.
  */
 public class Ray {
-    public Vec3 x0;  // Ursprung der Richtung
-    public Vec3 d;  // Normalisierte Richtung
-    public double tmin;
-    public double tmax;
+    public final Vec3 x0;  // Ursprung der Richtung
+    public final Vec3 d;  // Normalisierte Richtung
+    public final double tmin, tmax;
 
-    public Ray(Vec3 x0, Vec3 d){
-        this.x0 = x0;
-        this.d = Vec3.normalize(d);
-    }
 
     public Ray(Vec3 x0, Vec3 d, double tmin, double tmax){
         this.x0 = x0;
@@ -31,4 +26,5 @@ public class Ray {
      	  			return false;
      	  		}
      	  		
-}         	}
+}
+}

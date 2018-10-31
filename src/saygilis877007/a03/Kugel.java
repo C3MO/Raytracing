@@ -25,29 +25,29 @@ public class Kugel implements Comparable <Kugel> {
         Vec3 n1;
         Vec3 n2;
 
-        double p = Vec3.dotProduct(Vec3.multiply(2, ray.d), Vec3.subtract(ray.x0, mitte));
-        double q = Vec3.squaredLength(Vec3.subtract(ray.x0, mitte)) - Math.pow(radius, 2);
-        double w = Math.pow(p / 2, 2) - q;
+        double dotP = Vec3.dotProduct(Vec3.multiply(-2, ray.d), Vec3.subtract(ray.x0, mitte));
+        double squaredL = Vec3.squaredLength(Vec3.subtract(ray.x0, mitte)) - Math.pow(radius, 2);
+        double z = Math.pow(dotP / 2, 2) - squaredL;
 
 
 
-        // 1 Schnittpunkt
-        if (w == 0){
-            t0 = -p / 2;
+
+       /* if (z == 0){
+            t0 = dotP / 2;
             n0 = Vec3.divide(Vec3.subtract(ray.pointAt(t0), mitte), radius);
             return new Hit(t0, ray.pointAt(t0), n0);
         }
-        // 2 Schnittpunkte
-        if (w > 0){
-            t1 = -p / 2 + Math.sqrt(w);
-            t2 = -p / 2 - Math.sqrt(w);
+    */
+        if (z > 0){
+            t1 = dotP / 2 - Math.sqrt(z);
+            t2 = dotP / 2 + Math.sqrt(z);
 
             n1 = Vec3.divide(Vec3.subtract(ray.pointAt(t1), mitte), radius);
             n2 = Vec3.divide(Vec3.subtract(ray.pointAt(t2), mitte), radius);
 
 
 
-            if(t1 < t2){
+            if(t1 <= t2){
                 return new Hit(t1, ray.pointAt(t1), n1);
             }else{
 

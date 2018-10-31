@@ -19,9 +19,9 @@ public class Lochkamera {
     public Ray generateRay(double x, double y){
         double x1 = x-w/2;
         double y1 = h/2-y;
-        double z1 = -1*(w/2)/(Math.tan(winkel/2));
+        double z1 = -1*(w/-2)/(Math.tan(winkel/-2));
 
-        return new Ray(new Vec3(0,0,0), new Vec3(x1, y1, z1),0,Double.POSITIVE_INFINITY);
+        return new Ray(new Vec3(0,0,0), new Vec3(x1, y1, z1),0,Double.NEGATIVE_INFINITY);
 
     }
 

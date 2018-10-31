@@ -4,10 +4,9 @@ import cgtools.Vec3;
  * Created by home on 29.10.18.
  */
 public class Hit implements Comparable <Hit>{
-    public double t; //Strahlparmater
-    public Vec3 x;  //Position des Trefferpunkts
-    public Vec3 n;  // Normalenvektor
-    public Vec3 c; //Farbe der Oberfläche
+    public final double t; //Strahlparmater
+    public final Vec3 x;  //Position des Trefferpunkts
+    public final Vec3 n;  // Normalenvektor
 
 
     public Hit(double t, Vec3 x, Vec3 n){

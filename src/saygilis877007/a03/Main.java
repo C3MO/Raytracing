@@ -18,7 +18,7 @@ public class Main {
         Kugel kugel = new Kugel(80, new Vec3(0, 0, -180));
 
 
-        String filename = "doc/03-one-sphere.png";
+        String filename = "doc/a03-one-sphere.png";
         try {
             raytrace(kugel, kamera, n).write(filename);
             System.out.println("Wrote image: " + filename);

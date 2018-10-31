@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aebe2f91-e9e1-4c4a-8eda-bf22f3e52e41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/03-one-sphere.png" afterPath="$PROJECT_DIR$/doc/03-one-sphere.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/03-one-sphere.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a03/Hit.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Hit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a03/Kugel.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Kugel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a03/Lochkamera.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Lochkamera.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a03/Main.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a03/Ray.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a03/Ray.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +82,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,8 +161,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="819" />
-    <option name="y" value="114" />
+    <option name="x" value="877" />
+    <option name="y" value="144" />
     <option name="width" value="1636" />
     <option name="height" value="1027" />
   </component>
@@ -857,15 +853,15 @@
       <workItem from="1540883413373" duration="3560000" />
       <workItem from="1540887329326" duration="1427000" />
       <workItem from="1540902942679" duration="2567000" />
-      <workItem from="1540975675468" duration="5519000" />
+      <workItem from="1540975675468" duration="6503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63078000" />
+    <option name="totallyTimeSpent" value="64062000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="819" y="114" width="1636" height="1027" extended-state="0" />
+    <frame x="877" y="144" width="1636" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1386,8 +1382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/saygilis877007/a03/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state relative-caret-position="300">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

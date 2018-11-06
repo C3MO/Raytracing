@@ -16,8 +16,6 @@ public class Kugel implements Shape {
     }
 
     public Hit intersect(Ray r) {
-        //t_1/2 = −b ± sqrt(b^2 − 4*a*c)
-        //das kleinere t > 0 suchen wir
         Vec3 d = r.d;
         Vec3 x0 = Vec3.subtract(r.x0, center); //verschiebung der kugel in den nullpunkt
 
@@ -38,12 +36,12 @@ public class Kugel implements Shape {
 
         if (dis == 0) return new Hit(t1, schnittT1, schnittT1Norm, schnittT1Norm); //hat nur einen schnittpunkt
 
-        if (dis > 0) { //hat zwei schnittpunkte und wir suchen den kleineren
+        if (dis > 0) {
             if (t1 > 0 && t1 < t2 || t1 > 0 && t2 < 0) return new Hit(t1, schnittT1, schnittT1Norm, shapeColor);
             else if (t2 > 0 && t2 < t1 || t2 > 0 && t1 < 0) return new Hit(t2, schnittT2, schnittT2Norm, shapeColor);
         }
 
-        return null; //keine schnittpunkte
+        return null;
 
     }
 }

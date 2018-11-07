@@ -21,13 +21,13 @@ public class Group implements Shape{
         for (Shape s: formList) {
             Hit hitShape = s.intersect(r);
             if (hit == null) {
-                if (hitShape != null) hit = hitShape; //treffer wird abgespeichert
+                if (hitShape != null) hit = hitShape;
             } else {
-                if (hitShape != null && hitShape.t < hit.t) hit = hitShape; //treffer wird nur dann abgespeichert, wenn der neue treffpunkt kleineeres t hat
+                if (hitShape != null && hitShape.t < hit.t) hit = hitShape;
             }
         }
 
-        return hit; // null, wenn nie ein shape getroffen wurde, ansonsten hit vom jeweiligen shape
+        return hit;
     }
 
 }

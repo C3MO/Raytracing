@@ -7,13 +7,15 @@ public class Hit {
     public final double t;
     public final Vec3 position;
     public final Vec3 normal;
-    public final Vec3 color;
+    //public final Vec3 color;
+    public final Material material;
 
-    public Hit(double t, Vec3 position, Vec3 normal, Vec3 color) {
+    public Hit(double t, Vec3 position, Vec3 normal, Material material) {
         this.t = t;
         this.position = position;
         this.normal = normal;
-        this.color = color;
+        //this.color = color;
+        this.material = material;
     }
 
 }

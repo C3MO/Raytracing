@@ -7,14 +7,16 @@ import cgtools.Vec3;
 public class Background implements Shape{
 
 
-    private Vec3 backgroundColor;
 
-    Background(Vec3 backgroundColor) {
-        this.backgroundColor = backgroundColor;
+    private Material material;
+
+    Background(Material material) {
+
+        this.material = material;
     }
 
     @Override
     public Hit intersect(Ray r) {
-        return new Hit(r.t1, r.pointAt(r.t1), Vec3.vec3(0,0,0), backgroundColor);
+        return new Hit(r.tmax, r.pointAt(r.tmax), Vec3.vec3(1,0,0), material);
     }
 }

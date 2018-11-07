@@ -7,12 +7,12 @@ public class Plane implements Shape{
 
     private Vec3 tmin;
     private Vec3 tmax;
-    private Vec3 backgroundcolor;
+    private Material material;
 
-    Plane(Vec3 tmin, Vec3 tmax, Vec3 backgrcolor) {
+    Plane(Vec3 tmin, Vec3 tmax, Material material) {
         this.tmin = tmin;
         this.tmax = tmax;
-        this.backgroundcolor = backgrcolor;
+        this.material = material;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Plane implements Shape{
 
         double t = Vec3.dotProduct(Vec3.subtract(tmin, r.x0), tmax) / Vec3.dotProduct(r.d, tmax);
 
-        if (t > 0) return new Hit(t, r.pointAt(t), tmax, backgroundcolor);
+        if (t > 0 && t < r.tmax) return new Hit(t, r.pointAt(t), tmax, material);
 
         return null;
     }

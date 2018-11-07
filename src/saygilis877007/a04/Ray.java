@@ -7,13 +7,13 @@ public class Ray {
 
     public final Vec3 x0;
     public final Vec3 d;
-    public final double t0, t1;
+    public final double tmin, tmax;
 
     public Ray(Vec3 x0, Vec3 d) {
         this.x0 = x0;
         this.d = Vec3.normalize(d);
-        this.t0 = 0;
-        this.t1 = Double.POSITIVE_INFINITY;
+        this.tmin = 0;
+        this.tmax = Double.POSITIVE_INFINITY;
     }
 
     Vec3 pointAt(double t) {

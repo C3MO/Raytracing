@@ -45,16 +45,37 @@ public class Main {
         return image;
     }
 
+
     private static Group genObjects() {
         return new Group(
-                new Background(vec3(0, 0, 0)),
-                new Plane(vec3(0.0, -0.5, 0.0), vec3(0, 1, 0), gray), // boden
+
+                new Plane(vec3(0.0, -0.5, 0.0), vec3(0, 1, 0), new Lambertsches(vec3(0.5, 0.5, 0.5))),
+                new Kugel(0.5, vec3(1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
+                new Kugel(0.25, vec3(1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
+
+                new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
+                new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // rechtes bein
+
+                new Kugel(0.18, vec3(-0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
+                new Kugel(0.18, vec3(0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // rechter arm
+
+                new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
+                new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))),
 
 
-                new Kugel(0.5, vec3(0.0, -0.25, -2.5), green),
-                new Kugel(0.7, vec3(-1.0, -0.25, -2.5), red),
-                new Kugel(0.7, vec3(1.0, -0.25, -2.5), blue)
+                new Kugel(0.5, vec3(-1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
+                new Kugel(0.25, vec3(-1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
+                new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
+                new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // rechtes bein
+
+                new Kugel(0.18, vec3(0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
+                new Kugel(0.18, vec3(-0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // rechter arm
+
+                new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
+                new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))),
+
+                new Background(new Hintergrund())
         );
     }
 
@@ -76,14 +97,24 @@ public class Main {
         bgColor = Vec3.divide(bgColor, sampling);
         return bgColor;
     }
+    private static Vec3 radiance(Ray r, Shape g, int depth) {
+        if (depth == 0) return Vec3.zero;
 
+        Hit hit = g.intersect(r);
+
+        Vec3 emission = hit.material.emittedRadiance(r, hit);
+        Ray scattered = hit.material.scatteredRay(r, hit);
+
+        if (scattered != null) {
+            return Vec3.add(emission,
+                    Vec3.multiply(hit.material.albedo(r, hit), radiance(scattered, g, depth - 1)));
+        } else return emission;
+    }
     private static Vec3 pixelColor(double x, double y) {
-        Vec3 bgColor = vec3(0);
+        Vec3 bgColor;
 
         Ray ray = camera.generateRay(x, y);
-        Hit hit = group.intersect(ray);
-
-        if (hit != null)  bgColor = hit.color;
+        bgColor = radiance(ray, group, 5);
 
         return bgColor;
     }

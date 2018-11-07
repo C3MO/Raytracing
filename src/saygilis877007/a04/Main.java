@@ -51,7 +51,7 @@ public class Main {
 
                 new Plane(vec3(0.0, -0.5, 0.0), vec3(0, 1, 0), new Lambertsches(vec3(0.5, 0.5, 0.5))),
                 new Kugel(0.5, vec3(1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
-                new Kugel(0.25, vec3(1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.25, vec3(1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
                 new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
                 new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // rechtes bein
@@ -64,7 +64,7 @@ public class Main {
 
 
                 new Kugel(0.5, vec3(-1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
-                new Kugel(0.25, vec3(-1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.25, vec3(-1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
                 new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
                 new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // rechtes bein

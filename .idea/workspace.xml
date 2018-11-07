@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aebe2f91-e9e1-4c4a-8eda-bf22f3e52e41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Lambertsches.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Material.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Background.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Background.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Group.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Group.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Hit.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Hit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Kugel.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Kugel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/a04-scene.png" afterPath="$PROJECT_DIR$/doc/a04-scene.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Main.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Plane.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Plane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Ray.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Ray.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="65" column="43" lean-forward="false" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+            <state relative-caret-position="793">
+              <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kugel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Kugel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Kugel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
@@ -934,12 +925,12 @@
       <workItem from="1541487327308" duration="379000" />
       <workItem from="1541487743254" duration="755000" />
       <workItem from="1541488618265" duration="3743000" />
-      <workItem from="1541580190606" duration="11485000" />
+      <workItem from="1541580190606" duration="12096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81036000" />
+    <option name="totallyTimeSpent" value="81647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="735" y="102" width="1636" height="1027" extended-state="0" />
@@ -954,7 +945,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1352,24 +1343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Lambertsches.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Kugel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Background.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1399,11 +1372,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="65" column="43" lean-forward="false" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        <state relative-caret-position="793">
+          <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Lambertsches.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Kugel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>

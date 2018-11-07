@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aebe2f91-e9e1-4c4a-8eda-bf22f3e52e41" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/a04-scene.png" afterPath="$PROJECT_DIR$/doc/a04-scene.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Main.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java" afterPath="$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hintergrund.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hintergrund.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="70" lean-forward="false" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
+              <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -73,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kugel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Kugel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Kugel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
@@ -168,13 +168,13 @@
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Group.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Ray.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Material.java" />
-        <option value="$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Lambertsches.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Plane.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Hit.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Kugel.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Background.java" />
         <option value="$PROJECT_DIR$/src/saygilis877007/a04/Main.java" />
+        <option value="$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java" />
       </list>
     </option>
   </component>
@@ -925,12 +925,12 @@
       <workItem from="1541487327308" duration="379000" />
       <workItem from="1541487743254" duration="755000" />
       <workItem from="1541488618265" duration="3743000" />
-      <workItem from="1541580190606" duration="12096000" />
+      <workItem from="1541580190606" duration="12617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81647000" />
+    <option name="totallyTimeSpent" value="82168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="735" y="102" width="1636" height="1027" extended-state="0" />
@@ -1354,14 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="70" lean-forward="false" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cgtools/Vec3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1102">
@@ -1394,6 +1386,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saygilis877007/a04/Hintergrund.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
           <folding />
         </state>
       </provider>

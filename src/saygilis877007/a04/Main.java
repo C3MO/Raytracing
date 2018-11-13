@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         image = new Image(width, height);
 
-        String filename = "doc/a04-scene.png";
+        String filename = "doc/a05-diffuse-spheres.png";
 
         try {
             raytrace(new Camera(Math.PI / 2, width, height), genObjects(),100).write(filename);
@@ -52,10 +52,10 @@ public class Main {
         return new Group(
 
                 new Plane(vec3(0.0, -0.5, 0.0), vec3(0, 1, 0), new Lambertsches(vec3(0.5, 0.5, 0.5))),
-                new Kugel(0.5, vec3(1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
-                new Kugel(0.25, vec3(1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                //new Kugel(0.5, vec3(1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
+               // new Kugel(0.25, vec3(1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
-                new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
+               /* new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
                 new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // rechtes bein
 
                 new Kugel(0.18, vec3(-0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
@@ -64,18 +64,31 @@ public class Main {
                 new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
                 new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))),
 
+*/
 
-                new Kugel(0.5, vec3(-1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
-                new Kugel(0.25, vec3(-1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                //new Kugel(0.25, vec3(-1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.7, vec3(-1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.7, vec3(1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.7, vec3(-1.7, 0.4, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
-                new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
-                new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // rechtes bein
+                new Kugel(0.7, vec3(-1.3, -0.8, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.7, vec3(1.3, -0.8, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.7, vec3(1.7, 0.4, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
-                new Kugel(0.18, vec3(0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
-                new Kugel(0.18, vec3(-0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // rechter arm
 
-                new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
-                new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))),
+                new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
+                new Kugel(0.22, vec3(0, 0, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
+                new Kugel(0.15, vec3(0, 0, -2), new Lambertsches(vec3(0, 0, 0))), // linkes bein
+
+                new Kugel(0.22, vec3(0, 0.6, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
+                new Kugel(0.22, vec3(0, -0.6, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
+                new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 0, 0))), // rechtes bein
+
+                new Kugel(0.18, vec3(0.8, 0.1, -2.2), new Lambertsches(vec3(1, 0, 0))), // linker arm
+                new Kugel(0.18, vec3(-0.8, 0.1, -2.2), new Lambertsches(vec3(1, 0, 0))), // rechter arm
+
+                new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))), // linker arm
+                new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))),
 
                 new Background(new Hintergrund())
         );
@@ -118,7 +131,7 @@ public class Main {
         Ray ray = camera.generateRay(x, y);             //Ray wird erstellt von den zurückgegebenen Werten aus der Camera Klasse
         bgColor = radiance(ray, group, 5);          // stelle den radiance für die Gruppe und dem Ray ein
                                                             //Radiance funktion
-        return bgColor;
+        return bgColor;                                     //Die Rekursionstiefe ist dabei auf den Wert depth begrenzt
     }
 
 }

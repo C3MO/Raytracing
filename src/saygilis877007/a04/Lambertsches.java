@@ -7,9 +7,9 @@ import cgtools.Vec3;
  */
 public class Lambertsches implements Material {
 
-    private Vec3 alb;
-
-    Lambertsches(Vec3 alb) {
+    private Vec3 alb;                   //Oberfläche wird diffus reflektiert
+                                        //alb = albedo die Konstante Abschwächung
+    Lambertsches(Vec3 alb) {            //Albedo bestimmt die Farbe der Oberfläche unter weißem Licht
         this.alb = alb;
     }
 
@@ -32,3 +32,29 @@ public class Lambertsches implements Material {
         return alb;
     }
 }
+//-----Definition-----
+//Emission
+//* keine
+
+//Albedo
+//* BRDF konstant über die gesamte Oberfläche
+//* Farbe der Oberfläche
+
+//Reflektierter Strahl
+//* Ursprung: ist der Trefferpunkt
+//* Richtung: ist Zufällig mit der Kosinusverteilung
+
+
+//Lambertsches Kosinusgesetz
+//* Intensität vom einfallenden Licht ist abhängig vom Einfallswinkel
+//Einfallswinkel und einfallender Lichtenergie
+//Es beschreibt die perfekten diffuser Oberflächen
+
+//Spiegelung ist genau eine Richtung
+//* perfekt glatte spiegelnde oberfläche (Einfallswinkel = Ausfallwinkel
+
+//-----------------------------------
+//-----Diffuse Reflexion-------------
+//Streuung unendlich viele Richtungen
+//* Diffuse Oberfläche (raue oberflächen nicht glatte)
+//* Ausfallswinkel zufällig für jeden Trefferpunkt (Kosinusverteilung)

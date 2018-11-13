@@ -45,6 +45,8 @@ public class Main {
         return image;
     }
 
+    //Die Raytrace funktion ist leicht modifiziert worden (Rekursives Raytracing)
+
 
     private static Group genObjects() {
         return new Group(
@@ -98,11 +100,11 @@ public class Main {
         return bgColor;
     }
     private static Vec3 radiance(Ray r, Shape g, int depth) {
-        if (depth == 0) return Vec3.zero;
+        if (depth == 0) return Vec3.zero;               //Wenn die maximale Tiefe gleich 0 beträgt gebe zero aus der Vec3 Klasse zurück
 
-        Hit hit = g.intersect(r);
-
-        Vec3 emission = hit.material.emittedRadiance(r, hit);
+        Hit hit = g.intersect(r);           //die Gruppe g intersect den Ray r
+                                            //Query material auf dem hit punkt
+        Vec3 emission = hit.material.emittedRadiance(r, hit);           //kombiniert die emission und der reflektion
         Ray scattered = hit.material.scatteredRay(r, hit);
 
         if (scattered != null) {
@@ -113,9 +115,9 @@ public class Main {
     private static Vec3 pixelColor(double x, double y) {
         Vec3 bgColor;
 
-        Ray ray = camera.generateRay(x, y);
-        bgColor = radiance(ray, group, 5);
-
+        Ray ray = camera.generateRay(x, y);             //Ray wird erstellt von den zurückgegebenen Werten aus der Camera Klasse
+        bgColor = radiance(ray, group, 5);          // stelle den radiance für die Gruppe und dem Ray ein
+                                                            //Radiance funktion
         return bgColor;
     }
 

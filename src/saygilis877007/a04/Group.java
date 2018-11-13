@@ -18,8 +18,8 @@ public class Group implements Shape{
     public Hit intersect(Ray r) {
         Hit hit = null;
 
-        for (Shape s: formList) {
-            Hit hitShape = s.intersect(r);
+        for (Shape s: formList) {               // Anzahl der formen in einer for each schleife (0-179 in diesem Fall
+            Hit hitShape = s.intersect(r);      //tmin, tmax und material von Plane s & Ray r (x0, d, tmin und tmax) werden intersectet (Hit ist immer noch null
             if (hit == null) {
                 if (hitShape != null) hit = hitShape;
             } else {

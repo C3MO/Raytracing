@@ -18,3 +18,15 @@ public class Hintergrund implements Material {
         return null;
     }
 }
+
+
+//------definitionen---------
+//Emmission
+//* Farbe des Himmels in Strahlrichtung
+
+//Albedo
+//* Keine Streuung
+//* Keine Albedo
+
+//Reflektierter Strahl
+//* Keine Streuung

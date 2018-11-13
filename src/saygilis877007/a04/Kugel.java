@@ -16,10 +16,11 @@ public class Kugel implements Shape {
         this.center = center;
         this.material = material;
     }
-
-    public Hit intersect(Ray r) {
-        Vec3 d = r.d;
-        Vec3 x0 = Vec3.subtract(r.x0, center);
+    // Die Funktion intersect prüft die Schnittpunkte für alle Objekte der Szene
+    //Alle Objekte werden mit dem Ray intersected
+    public Hit intersect(Ray r) {                              //Hit intersect den Ray
+        Vec3 d = r.d;                                       //d von Ray (x,y und z Koordinaten
+        Vec3 x0 = Vec3.subtract(r.x0, center);              //
 
         double a = Vec3.dotProduct(d, d);
         double b = Vec3.dotProduct(Vec3.multiply(2, x0), d);

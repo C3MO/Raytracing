@@ -1,17 +1,21 @@
-package saygilis877007.a04;
-import static cgtools.Vec3.*;
+package saygilis877007.a05;
+
 import cgtools.Random;
 import cgtools.Vec3;
 import saygilis877007.Image;
+
 import java.io.IOException;
+
+import static cgtools.Vec3.vec3;
+import static cgtools.Vec3.white;
 
 /**
  * Created by home on 06.11.18.
  */
 public class Main {
 
-    private static int width = 160;
-    private static int height = 90;
+    private static int width = 360;
+    private static int height = 240;
     private static Image image;
     private static int sampling;
     private static Camera camera;
@@ -20,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         image = new Image(width, height);
 
-        String filename = "doc/a05-diffuse-spheres.png";
+        String filename = "doc/a06-mirrors-glass-1.png";
 
         try {
             raytrace(new Camera(Math.PI / 2, width, height), genObjects(),100).write(filename);
@@ -89,6 +93,7 @@ public class Main {
 
                 new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))), // linker arm
                 new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))),
+                new Kugel(0.5, vec3(0.8, 0.5, -1.8), new Spiegel(white)),
 
                 new Background(new Hintergrund())
         );

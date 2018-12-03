@@ -1,5 +1,6 @@
-package saygilis877007.a04;
+package saygilis877007.a05;
 import cgtools.Vec3;
+
 /**
  * Created by home on 07.11.18.
  */

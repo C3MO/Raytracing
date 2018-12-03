@@ -1,4 +1,4 @@
-package saygilis877007.a04;
+package saygilis877007.a05;
 import cgtools.Random;
 import cgtools.Vec3;
 

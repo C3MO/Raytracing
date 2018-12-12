@@ -1,4 +1,4 @@
-package saygilis877007.a05;
+package saygilis877007.a07;
 
 import cgtools.Random;
 import cgtools.Vec3;
@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         image = new Image(width, height);
 
-        String filename = "doc/a06-mirrors-glass-1.png";
+        String filename = "doc/a09.png";
 
         try {
             raytrace(new Camera(Math.PI / 2, width, height), genObjects(),100).write(filename);
@@ -53,50 +53,41 @@ public class Main {
 
 
     private static Group genObjects() {
-        return new Group(
 
-                new Plane(vec3(0.0, -0.5, 0.0), vec3(0, 1, 0), new Lambertsches(vec3(0.5, 0.5, 0.5))),
-                //new Kugel(0.5, vec3(1, 0.3, -3), new Lambertsches(vec3(1, 0, 0))), // body
-               // new Kugel(0.25, vec3(1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
+            Group gr = new Group();
 
-               /* new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // linkes bein
-                new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 1, 0))), // rechtes bein
+            double angle, c, r;
+            c = (Math.sqrt(5) + 1) / 2;
+            double x, y;
+            int numberOfSeeds = 100;
 
-                new Kugel(0.18, vec3(-0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
-                new Kugel(0.18, vec3(0.8, 0.1, -2.2), new Lambertsches(vec3(1, 1, 0))), // rechter arm
+            for (int i = 0; i < numberOfSeeds; i++) {
+                r = Math.pow(i, c) / (numberOfSeeds / 2);
+                angle = 2 * Math.PI * c * i;
+                x = r * Math.sin(angle);
+                y = r * Math.cos(angle);
+                if (i % 2 == 0) gr.addShape(new Kugel(i / (numberOfSeeds / 10) * 0.5, vec3(x, y + 40, -50), new Lambertsches(vec3(0.839, 0.443, 0.474))));
+                else gr.addShape(new Kugel(i / (numberOfSeeds / 10) * 0.5, vec3(x, y + 40, -50), new Lambertsches(vec3(0.839, 0.658, 0.443))));
+                //gr.addShape(new Kugel(i / (numberOfSeeds / 10) * 0.5, vec3(x, y + 40, -2), new Glass(vec3(0.839, 0.443, 0.474))));
+            }
 
-                new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))), // linker arm
-                new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 1, 0))),
+            //links
+            gr.addShape(new Zylinder(10, 100, vec3(-60, 0, -70), new Lambertsches(vec3(0.443, 0.705, 0.839))));
+            gr.addShape(new Zylinder(10, 100, vec3(-60, 0, -30), new Lambertsches(vec3(0.509, 0.839, 0.443))));
 
-*/
+            //rechts
+            gr.addShape(new Zylinder(10, 100, vec3(60, 0, -70), new Lambertsches(vec3(0.509, 0.839, 0.443))));
+            gr.addShape(new Zylinder(10, 100, vec3(60, 0, -30), new Lambertsches(vec3(0.443, 0.705, 0.839))));
 
-                //new Kugel(0.25, vec3(-1, 0.9, -3), new Lambertsches(vec3(1, 1, 1))), // body
-                new Kugel(0.7, vec3(-1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
-                new Kugel(0.7, vec3(1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
-                new Kugel(0.7, vec3(-1.7, 0.4, -3), new Lambertsches(vec3(1, 1, 1))), // body
+            //links nach rechts
+            gr.addShape(new Kegel(1.5, 4, vec3(-30, 0.5, 0), new Lambertsches(vec3(0.721, 0.443, 0.839))));
+            gr.addShape(new Kegel(1.5, 4, vec3(0, 0.5, 0), new Lambertsches(vec3(0.839, 0.443, 0.756))));
+            gr.addShape(new Kegel(1.5, 4, vec3(30, 0.5, 0), new Lambertsches(vec3(0.721, 0.443, 0.839))));
 
-                new Kugel(0.7, vec3(-1.3, -0.8, -3), new Lambertsches(vec3(1, 1, 1))), // body
-                new Kugel(0.7, vec3(1.3, -0.8, -3), new Lambertsches(vec3(1, 1, 1))), // body
-                new Kugel(0.7, vec3(1.7, 0.4, -3), new Lambertsches(vec3(1, 1, 1))), // body
+            gr.addShape(new Plane(vec3(0, -1, 0), vec3(0, 1, 0), new Lambertsches(vec3(0.396, 0.498, 0.603))));
+            gr.addShape(new Background(new Hintergrund()));
 
-
-                new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
-                new Kugel(0.22, vec3(0, 0, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
-                new Kugel(0.15, vec3(0, 0, -2), new Lambertsches(vec3(0, 0, 0))), // linkes bein
-
-                new Kugel(0.22, vec3(0, 0.6, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
-                new Kugel(0.22, vec3(0, -0.6, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
-                new Kugel(0.22, vec3(-0.5, -0.2, -2.5), new Lambertsches(vec3(1, 0, 0))), // rechtes bein
-
-                new Kugel(0.18, vec3(0.8, 0.1, -2.2), new Lambertsches(vec3(1, 0, 0))), // linker arm
-                new Kugel(0.18, vec3(-0.8, 0.1, -2.2), new Lambertsches(vec3(1, 0, 0))), // rechter arm
-
-                new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))), // linker arm
-                new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))),
-                new Kugel(0.5, vec3(0.8, 0.5, -1.8), new Spiegel(white)),
-
-                new Background(new Hintergrund())
-        );
+            return gr;
     }
 
     private static Vec3 pixelColor(int x, int y) {

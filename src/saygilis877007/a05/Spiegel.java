@@ -1,5 +1,4 @@
 package saygilis877007.a05;
-import cgtools.Random;
 import cgtools.Vec3;
 /**
  * Created by home on 14.11.18.
@@ -29,6 +28,7 @@ public class Spiegel implements Material{
         double luft = LUFT;
         double glas = GLAS;
 
+        return r;
     }
         Vec3 scattered;
 

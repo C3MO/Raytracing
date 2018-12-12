@@ -1,10 +1,11 @@
-package saygilis877007.a07;
+package saygilis877007.a09;
 
 import cgtools.Vec3;
 
 import java.util.Arrays;
 
 import static cgtools.Vec3.*;
+
 /**
  * Created by home on 12.12.18.
  */

@@ -1,4 +1,4 @@
-package saygilis877007.a07;
+package saygilis877007.a08;
 import cgtools.Vec3;
 
 /**
@@ -6,9 +6,9 @@ import cgtools.Vec3;
  */
 public interface Material {
 
-    Vec3 emittedRadiance (Ray r, Hit h);
+    Vec3 emittedRadiance(Ray r, Hit h);
     Ray scatteredRay(Ray r, Hit h);
-    Vec3 albedo (Ray r, Hit h);
+    Vec3 albedo(Ray r, Hit h);
 
 }
 //---------definitionen------------

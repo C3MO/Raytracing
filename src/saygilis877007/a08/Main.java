@@ -1,4 +1,4 @@
-package saygilis877007.a07;
+package saygilis877007.a08;
 
 import cgtools.Random;
 import cgtools.Vec3;
@@ -7,7 +7,6 @@ import saygilis877007.Image;
 import java.io.IOException;
 
 import static cgtools.Vec3.vec3;
-import static cgtools.Vec3.white;
 
 /**
  * Created by home on 06.11.18.

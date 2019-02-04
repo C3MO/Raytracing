@@ -14,8 +14,8 @@ import static cgtools.Vec3.white;
  */
 public class Main {
 
-    private static int width = 640;
-    private static int height = 480;
+    private static int width = 1920;
+    private static int height = 1080;
     private static Image image;
     private static int sampling;
     private static Camera camera;
@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         image = new Image(width, height);
 
-        String filename = "doc/a05-diffuse-spheres.png";
+        String filename = "doc/cgg-competition-ss-18-877007.png";
 
         try {
             raytrace(new Camera(Math.PI / 2, width, height), genObjects(),100).write(filename);

@@ -14,8 +14,8 @@ import static cgtools.Vec3.white;
  */
 public class Main {
 
-    private static int width = 1920;
-    private static int height = 1080;
+    private static int width = 640;
+    private static int height = 480;
     private static Image image;
     private static int sampling;
     private static Camera camera;
@@ -74,11 +74,12 @@ public class Main {
                 new Kugel(0.7, vec3(-1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
                 new Kugel(0.7, vec3(1, 1.2, -3), new Lambertsches(vec3(1, 1, 1))), // body
                 new Kugel(0.7, vec3(-1.7, 0.4, -3), new Lambertsches(vec3(1, 1, 1))), // body
+                new Kugel(0.7, vec3(-2.3, 0, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
                 new Kugel(0.7, vec3(-1.3, -0.8, -3), new Lambertsches(vec3(1, 1, 1))), // body
                 new Kugel(0.7, vec3(1.3, -0.8, -3), new Lambertsches(vec3(1, 1, 1))), // body
                 new Kugel(0.7, vec3(1.7, 0.4, -3), new Lambertsches(vec3(1, 1, 1))), // body
-
+                new Kugel(0.7, vec3(2.3, 0, -3), new Lambertsches(vec3(1, 1, 1))), // body
 
                 new Kugel(0.22, vec3(0.5, -0.2, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
                 new Kugel(0.22, vec3(0, 0, -2.5), new Lambertsches(vec3(1, 0, 0))), // linkes bein
@@ -93,7 +94,8 @@ public class Main {
 
                 new Kugel(0.18, vec3(0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))), // linker arm
                 new Kugel(0.18, vec3(-0.4, 0.4, -2.2), new Lambertsches(vec3(1, 0, 0))),
-                //new Kugel(0.5, vec3(0.8, 0.5, -1.8), new Spiegel(white)),
+                new Kugel(0.5, vec3(3.0, 0.8, -1.8), new Spiegel(white)),
+                new Kugel(0.5, vec3(-3.0, -0.8, +1.8), new Spiegel(white)),
 
                 new Background(new Hintergrund())
         );

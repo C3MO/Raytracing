@@ -10,9 +10,7 @@ import static cgtools.Vec3.vec3;
 import cgtools.Mat4;
 import cgtools.Random;
 import cgtools.Vec3;
-import lam856667.Image;
-import org.jetbrains.annotations.NotNull;
-
+import saygilis877007.Image;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +20,7 @@ import static cgtools.Mat4.rotate;
 import static cgtools.Mat4.translate;
 import static cgtools.Vec3.*;
 
-
+/*
 public class Main {
 
     private static int sampling;
@@ -49,7 +47,7 @@ public class Main {
         //Mat4 cameraPos = cameraT.multiply(cameraR1.multiply(cameraR2));
 
         //Mat4 cameraPos = Mat4.translate(vec3(0, 0, 20));
-
+/*
         raytrace(new Camera(Math.PI / 2, width, height, cameraPos), genObjects(), 100);
 
 

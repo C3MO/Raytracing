@@ -2,3 +2,6 @@
 bin/
 build/
 *.class
+.classpath
+.git
+.idea

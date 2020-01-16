@@ -1,7 +1,5 @@
 .DS_Store
-bin/
 build/
 *.class
-.classpath
-.git
-.idea
+.classpath/
+.idea/
